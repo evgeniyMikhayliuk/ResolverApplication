@@ -12,6 +12,8 @@ import org.testng.asserts.SoftAssert;
 import pages.BasePage;
 import pages.Test1Page;
 
+import static utils.TestUtils.loadBasePage;
+
 @Listeners({AllureTestNg.class})
 public class Test1Test extends BaseTest {
 
@@ -29,14 +31,16 @@ public class Test1Test extends BaseTest {
         urlOfPages = new UrlOfPages();
         data = new Data();
 
-        urlOfPages.setBasePage(landing);
-        basePage.loadPage(urlOfPages.homePage());
+        loadBasePage(basePage, urlOfPages, landing);
     }
 
     @Test()
     @Description("Assert that both the email address and password inputs are present as well as the login button")
     @Epic("Test 1")
     public void checkEmailPasswordFieldsOnTheHomePage() {
+
+        String projectPath = System.getProperty("user.dir");
+        System.out.println("Project Path: " + projectPath);
 
         SoftAssert softAssert = new SoftAssert();
 

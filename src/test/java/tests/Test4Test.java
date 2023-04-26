@@ -11,6 +11,8 @@ import org.testng.asserts.SoftAssert;
 import pages.BasePage;
 import pages.Test4Page;
 
+import static utils.TestUtils.loadBasePage;
+
 @Listeners({AllureTestNg.class})
 public class Test4Test extends BaseTest {
 
@@ -25,8 +27,7 @@ public class Test4Test extends BaseTest {
         test4Page = new Test4Page(driver);
         urlOfPages = new UrlOfPages();
 
-        urlOfPages.setBasePage(landing);
-        basePage.loadPage(urlOfPages.homePage());
+        loadBasePage(basePage, urlOfPages, landing);
 
         test4Page.scrollToTest4Block();
     }

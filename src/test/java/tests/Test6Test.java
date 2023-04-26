@@ -12,6 +12,8 @@ import org.testng.annotations.Test;
 import pages.BasePage;
 import pages.Test6Page;
 
+import static utils.TestUtils.loadBasePage;
+
 @Listeners({AllureTestNg.class})
 public class Test6Test extends BaseTest {
 
@@ -19,7 +21,7 @@ public class Test6Test extends BaseTest {
     private Test6Page test6Page;
     private UrlOfPages urlOfPages;
 
-    private String landing = System.getProperty("landing");
+    private final String landing = System.getProperty("landing");
 
     @BeforeMethod
     public void setUp(){
@@ -27,8 +29,7 @@ public class Test6Test extends BaseTest {
         test6Page = new Test6Page(driver);
         urlOfPages = new UrlOfPages();
 
-        urlOfPages.setBasePage(landing);
-        basePage.loadPage(urlOfPages.homePage());
+        loadBasePage(basePage, urlOfPages, landing);
 
         test6Page.scrollToTest6Block();
     }

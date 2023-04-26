@@ -20,8 +20,7 @@ dependencies {
 }
 
 task chrometests(type: Test) {
-    systemProperty "webdriver.chrome.driver","src/test/java/drivers/chromedriver"
-    systemProperty "landing","file:///Users/lunananebe/Downloads/"
+    systemProperty "landing","/src/test/resources"
     systemProperty "file.encoding","UTF-8"
     useTestNG(){
         suites 'src/test/resources//suites/homePage.xml'
