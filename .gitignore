@@ -1,0 +1,19 @@
+### Gradle ###
+.gradle/
+build/
+
+### IDEA ###
+.idea/
+out/
+*.iml
+*.ipr
+*.iws
+
+### ALLURE ###
+allure-results/
+/.allure
+
+### Mac OS specific ###
+.DS_Store
+
+**/bin

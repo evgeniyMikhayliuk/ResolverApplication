@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="resolverApplication">
+    <test name="resolverApplication">
+        <classes>
+            <class name="tests.Test1Test"/>
+            <class name="tests.Test2Test"/>
+            <class name="tests.Test3Test"/>
+            <class name="tests.Test4Test"/>
+            <class name="tests.Test5Test"/>
+            <class name="tests.Test6Test"/>
+        </classes>
+    </test>
+</suite>
